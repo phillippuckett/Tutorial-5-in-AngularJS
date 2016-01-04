@@ -1,12 +1,13 @@
-body {
+html, body {
   /*block*/
-  background-color: darkslategray;
+  background-color: slategray;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   /*text*/
   font-family: 'Aguafina Script', cursive;
+  color: darkslategrey;
 }
 
 .menu {

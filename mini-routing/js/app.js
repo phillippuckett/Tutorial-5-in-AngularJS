@@ -1,29 +1,25 @@
 var app = angular.module('mini-routing', ['ui.router'])
-    .config(function ($stateprovider, $stateRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider) {
         
         /**STATE PROVIDER*/
         $stateProvider
-        /**declare the name of the state "home"*/
             .state('home', {
-                templateUrl: '/js/home/homeTmpl.html',
-                controller: 'homeCtrl',
-                url: '/'
+                url: '/',
+                templateUrl: 'js/home/homeTmpl.html',
+                controller: 'homeCtrl'
             })
-            
-        /**declare the name of the state "settings"*/
             .state('settings', {
-                templateUrl: '/js/settings/settingsTmpl.html',
-                controller: 'settingsCtrl',
-                url: '/settings'
+                url: '/settings',
+                templateUrl: 'js/settings/settingsTmpl.html',
+                controller: 'settingsCtrl'
             })
-            
-        /**declare the name of the state "products"*/
             .state('products', {
                 url: '/products/:id',
-                templateUrl: 'js/products/productTmpl.html',
+                templateUrl: 'js/products/productsTmpl.html',
                 controller: 'productsCtrl'
             });
-        /**URL ROUTE PROVIDER*/
+            
+        /**ROUTE PROVIDER*/
         $urlRouterProvider
             .otherwise('/');
     });
