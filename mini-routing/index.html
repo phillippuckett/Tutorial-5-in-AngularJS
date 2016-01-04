@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mini-routing">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Routing 101</title>
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Aguafina+Script' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <!--UI-ROUTING-->
+    <div class="menu">
+        <ul>
+            <li><a ui-sref="home">Home</a></li>
+            <li>
+                Products
+                <ul>
+                    <li><a ui-sref="products({id: 'shoes'})">Shoes</a></li>
+                    <li><a ui-sref="products({id: 'socks'})">Socks</a></li>
+                </ul>
+            </li>
+            <li><a ui-sref="settings"> Settings </a></li>
+        </ul>
+    </div>
+
+    <div class="view-container">
+        <div ui-view></div>
+    </div>
+
+    <!--SCRIPTS-->
+    <!--LIBRARIES-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+    <!--JS-->
+    <script src="js/app.js"></script>
+
+    <!--HOME-->
+    <script src="js/home/homeCtrl.js"></script>
+
+    <!--PRODUCTS-->
+    <script src="js/products/productsCtrl.js"></script>
+    <script src="js/products/productsService.js"></script>
+
+    <!--SETTINGS-->
+    <script src="js/settings/settingsCtrl.js"></script>
+</body>
+
+</html>
