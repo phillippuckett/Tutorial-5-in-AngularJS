@@ -1,6 +1,5 @@
-var app = angular.module('nbaRoutes');
-
-app.service('teamService', function ($http, $q) {
+angular.module('nbaRoutes')
+.service('teamService', function ($http, $q) {
 
     // service code
 

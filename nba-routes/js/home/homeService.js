@@ -1,5 +1,4 @@
-var app = angular.module('nbaRoutes');
-
-app.service('homeService', function($http, $q, teamService){
+angular.module('nbaRoutes')
+.service('homeService', function($http, $q, teamService){
 
 });
